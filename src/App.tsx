@@ -1,6 +1,6 @@
 import Navbar from "@/scences/navbar";
 import { useEffect, useState } from "react";
-
+import Home from "@/scences/home";
 import { SelectedPage } from "@/shared/types";
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -28,6 +28,7 @@ function App() {
   return (
     <div className="app bg-gray-20">
       <Navbar isTopPage={isTopPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+      <Home setSelectedPage={setSelectedPage}/>
     </div>
   );
 }
